@@ -1,0 +1,24 @@
+@use '../abstracts/abstracts' as *;
+
+.header_nav ul {
+    @include reset-list();
+    gap: 50px;
+    a {
+        text-decoration: none;
+        color: $grey;
+        font-weight: 300;
+        &.active, &:hover {
+            color: $orange;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 80%;
+                height: 2px;
+                background-color: $orange;
+                bottom: -10px;
+                left: 10%;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@use '../abstracts/abstracts' as *;
+
+.header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_login ul {
+        @include reset-list();
+        gap: 35px;
+        .cart {
+            position: relative;
+            display: inline-block;
+            width: 30px;
+            height: 35px;
+            img {
+                width: 25px;                
+            }
+            &::before {
+                    content: '';
+                    position: absolute;
+                    background-color: $orange;
+                    width: 7px;
+                    height: 7px;
+                    top: -10;
+                    right: 0;
+                    border-radius: 50%;
+            }
+        }
+    }
+}
